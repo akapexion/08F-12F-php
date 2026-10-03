@@ -1,364 +1,462 @@
 
-    <?php
-      include("base/header.php");
-    ?>
-    <!-- START: Dashboard Header Banner -->
-    <div class="page-header">
-      <div>
-        <h1 class="page-title">Dashboard</h1>
-        <p class="page-subtitle">An easy way to manage sales with care and precision.</p>
+  <?php
+    include("base/header.php");
+  ?>
+  <main class="site-main">
+    
+    <!--================ Hero banner start =================-->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row no-gutters align-items-center pt-60px">
+          <div class="col-5 d-none d-sm-block">
+            <div class="hero-banner__img">
+              <img class="img-fluid" src="img/home/hero-banner.png" alt="">
+            </div>
+          </div>
+          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+            <div class="hero-banner__content">
+              <h4>Shop is fun</h4>
+              <h1>Browse Our Premium Product</h1>
+              <p>Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.</p>
+              <a class="button button-hero" href="#">Browse Now</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="btn-date-picker" type="button" id="date-picker-trigger">
-        <i class="bi bi-calendar4-event"></i>
-        <span id="selected-date-range">January 12, 2026 - January 23, 2026</span>
-        <i class="bi bi-chevron-down ms-1"></i>
-      </button>
-    </div>
-    <!-- END: Dashboard Header Banner -->
+    </section>
+    <!--================ Hero banner start =================-->
 
-    <!-- START: Main Layout Grid (2 Columns: Dashboard + Performance Pane) -->
-    <div class="row g-4">
+    <!--================ Hero Carousel start =================-->
+    <section class="section-margin mt-0">
+      <div class="owl-carousel owl-theme hero-carousel">
+        <div class="hero-carousel__slide">
+          <img src="img/home/hero-slide1.png" alt="" class="img-fluid">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Wireless Headphone</h3>
+            <p>Accessories Item</p>
+          </a>
+        </div>
+        <div class="hero-carousel__slide">
+          <img src="img/home/hero-slide2.png" alt="" class="img-fluid">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Wireless Headphone</h3>
+            <p>Accessories Item</p>
+          </a>
+        </div>
+        <div class="hero-carousel__slide">
+          <img src="img/home/hero-slide3.png" alt="" class="img-fluid">
+          <a href="#" class="hero-carousel__slideOverlay">
+            <h3>Wireless Headphone</h3>
+            <p>Accessories Item</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero Carousel end =================-->
 
-      <!-- TOP AREA: Quick Info Stat Cards Row (Full Width) -->
-      <div class="col-12">
-        <div class="row g-4">
-          <!-- Stat Card 1: Green Alert Banner -->
-          <div class="col-md-4">
-            <div class="card alert-green-card">
-              <div class="position-relative z-index-2">
-                <span class="alert-green-badge">Update</span>
-                <div class="alert-green-date">Feb 14th 2026</div>
-                <div class="alert-green-text">Sales revenue increased 40% in 1 week</div>
+    <!-- ================ trending product section start ================= -->  
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Popular Item in the market</p>
+          <h2>Trending <span class="section-intro__style">Product</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product1.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
               </div>
-              <a href="#" class="alert-green-link z-index-2" id="alert-link-statistics">
-                <span>See Statistics</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-
-              <!-- Inline SVG geometric decoration (Lime green 6-pointed star/asterisk with rounded caps) -->
-              <svg class="alert-green-bg-shape" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g transform="translate(50,50)">
-                  <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" />
-                  <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" transform="rotate(60)" />
-                  <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" transform="rotate(120)" />
-                </g>
-              </svg>
-            </div>
-          </div>
-
-          <!-- Stat Card 2: Net Income -->
-          <div class="col-md-4">
-            <div class="card card-stat d-flex flex-column justify-content-between">
-              <div>
-                <div class="card-header">
-                  <span class="stat-label">Net Income</span>
-                  <div class="dropdown">
-                    <button class="card-more-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                      aria-label="More Options" id="btn-more-income">
-                      <i class="bi bi-three-dots"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                      <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat"></i> Refresh</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export
-                          Report</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-eye-slash"></i> Hide Details</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="stat-value">$196.000</div>
-                <div class="trend-badge trend-up">
-                  <i class="bi bi-arrow-up-right"></i>
-                  <span>+35% from last month</span>
-                </div>
-              </div>
-              <div class="sparkline-container sparkline-card-footer">
-                <div id="income-sparkline"></div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <p class="card-product__price">$150.00</p>
               </div>
             </div>
           </div>
-
-          <!-- Stat Card 3: Total Return -->
-          <div class="col-md-4">
-            <div class="card card-stat d-flex flex-column justify-content-between">
-              <div>
-                <div class="card-header">
-                  <span class="stat-label">Total Return</span>
-                  <div class="dropdown">
-                    <button class="card-more-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                      aria-label="More Options" id="btn-more-return">
-                      <i class="bi bi-three-dots"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                      <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat"></i> Refresh</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export
-                          Report</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-eye-slash"></i> Hide Details</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="stat-value">$32.000</div>
-                <div class="trend-badge trend-down">
-                  <i class="bi bi-arrow-down-left"></i>
-                  <span>-24% from last month</span>
-                </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product2.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
               </div>
-              <div class="sparkline-container sparkline-card-footer">
-                <div id="return-sparkline"></div>
+              <div class="card-body">
+                <p>Beauty</p>
+                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product3.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product4.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Decor</p>
+                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product5.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product6.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product7.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="img/product/product8.png" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>Kids Toy</p>
+                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
+                <p class="card-product__price">$150.00</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- END: TOP AREA -->
+    </section>
+    <!-- ================ trending product section end ================= -->  
 
-      <!-- LEFT AREA: Primary Dashboard Stats & Tables -->
-      <div class="col-xl-9 col-lg-8">
 
-        <!-- START: Details Area (Transactions + Performance Charts) -->
-        <div class="row g-4">
-          <!-- Column: Revenue Chart (Full Width / Wider) -->
-          <div class="col-12">
-            <div class="card mb-0">
-              <div class="card-header mb-2">
-                <h2 class="card-title">Revenue</h2>
-                <!-- Custom Static Legends -->
-                <div class="d-flex gap-3 align-items-center">
-                  <div class="chart-legend-item">
-                    <span class="legend-dot bg-forest-medium"></span>
-                    <span class="chart-legend-label">Income</span>
-                  </div>
-                  <div class="chart-legend-item">
-                    <span class="legend-dot bg-lime-accent"></span>
-                    <span class="chart-legend-label">Expenses</span>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-baseline gap-2 mb-3">
-                <span class="stat-value-amount">$196.000</span>
-                <span class="trend-badge trend-up fs-xs">+35% from last month</span>
-              </div>
-              <div id="revenue-chart"></div>
+    <!-- ================ offer section start ================= --> 
+    <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="offer__content text-center">
+              <h3>Up To 50% Off</h3>
+              <h4>Winter Sale</h4>
+              <p>Him she'd let them sixth saw light</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
             </div>
-          </div>
-
-          <!-- Column: Transaction List -->
-          <div class="col-md-7 d-flex flex-column">
-            <div class="card h-100 flex-grow-1">
-              <div class="card-header">
-                <h2 class="card-title">Transaction</h2>
-                <div class="dropdown">
-                  <button class="card-more-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                    aria-label="More Options" id="btn-more-transaction">
-                    <i class="bi bi-three-dots"></i>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-funnel"></i> Filter Status</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down"></i> Export CSV</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Transaction Items List -->
-              <div class="transaction-list">
-                <div class="transaction-item">
-                  <div class="transaction-icon bg-forest-light text-lime">
-                    <i class="bi bi-spotify"></i>
-                  </div>
-                  <div class="transaction-info">
-                    <div class="transaction-name">Spotify Subscription</div>
-                    <div class="transaction-date">Feb 14, 2026 • 12:40 PM</div>
-                  </div>
-                  <div class="transaction-amount text-main">-$15.00</div>
-                </div>
-
-                <div class="transaction-item">
-                  <div class="transaction-icon bg-forest-light text-lime">
-                    <i class="bi bi-paypal"></i>
-                  </div>
-                  <div class="transaction-info">
-                    <div class="transaction-name">Paypal Transfer</div>
-                    <div class="transaction-date">Feb 13, 2026 • 08:15 AM</div>
-                  </div>
-                  <div class="transaction-amount text-success">+$1,250.00</div>
-                </div>
-
-                <div class="transaction-item">
-                  <div class="transaction-icon bg-forest-light text-lime">
-                    <i class="bi bi-stripe"></i>
-                  </div>
-                  <div class="transaction-info">
-                    <div class="transaction-name">Stripe Payout</div>
-                    <div class="transaction-date">Feb 11, 2026 • 04:30 PM</div>
-                  </div>
-                  <div class="transaction-amount text-success">+$3,400.00</div>
-                </div>
-
-                <div class="transaction-item">
-                  <div class="transaction-icon bg-forest-light text-lime">
-                    <i class="bi bi-slack"></i>
-                  </div>
-                  <div class="transaction-info">
-                    <div class="transaction-name">Slack Pro Workspace</div>
-                    <div class="transaction-date">Feb 09, 2026 • 09:20 AM</div>
-                  </div>
-                  <div class="transaction-amount text-main">-$45.00</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Column: Product Overview Progress -->
-          <div class="col-md-5 d-flex flex-column">
-            <div class="card h-100 flex-grow-1">
-              <div class="card-header">
-                <h2 class="card-title">Product Overview</h2>
-                <div class="dropdown">
-                  <button class="card-more-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                    aria-label="More Options" id="btn-more-products">
-                    <i class="bi bi-three-dots"></i>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i> Add Product</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Manage</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Product Launched</span>
-                  <span class="progress-value">233</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Product Launched Progress" aria-valuenow="65"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-lime-accent w-65"></div>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Ongoing Product</span>
-                  <span class="progress-value">23</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Ongoing Product Progress" aria-valuenow="20"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-lime-accent opacity-50 w-50"></div>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Product Sold</span>
-                  <span class="progress-value">482</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Product Sold Progress" aria-valuenow="85"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-lime-accent w-85"></div>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Product Returned</span>
-                  <span class="progress-value">8</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Product Returned Progress" aria-valuenow="10"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-brand-orange w-38"></div>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Product In Stock</span>
-                  <span class="progress-value">1,420</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Product In Stock Progress" aria-valuenow="75"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-lime-accent w-75"></div>
-                </div>
-              </div>
-
-              <div class="progress-container">
-                <div class="progress-label-row">
-                  <span class="progress-label">Pending Shipment</span>
-                  <span class="progress-value">64</span>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Pending Shipment Progress" aria-valuenow="45"
-                  aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-lime-accent opacity-50 w-45"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- END: Details Area -->
-
-      </div>
-
-      <!-- RIGHT AREA: Performance Details Sidebar Panel -->
-      <div class="col-xl-3 col-lg-4">
-        <div class="right-panel-wrapper d-flex flex-column gap-4 h-100">
-
-          <!-- Performance Donut Chart card -->
-          <div class="card flex-grow-1 d-flex flex-column justify-content-between mb-0">
-            <div class="card-header mb-1">
-              <h2 class="card-title">Total View Performance</h2>
-            </div>
-
-            <div id="views-chart"></div>
-
-            <!-- Custom Legends below the chart -->
-            <div class="chart-legends-container">
-              <div class="chart-legend-item">
-                <span class="legend-dot bg-lime-accent"></span>
-                <span class="text-muted-green">View Count</span>
-              </div>
-              <div class="chart-legend-item">
-                <span class="legend-dot bg-forest-medium"></span>
-                <span class="text-muted-green">Percentage</span>
-              </div>
-              <div class="chart-legend-item">
-                <span class="legend-dot bg-brand-orange"></span>
-                <span class="text-muted-green">Sales</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Level Up Promotion CTA banner -->
-          <div class="promo-banner-card">
-            <!-- Inline SVG geometric decoration (Lime green 6-pointed star/asterisk with rounded caps) -->
-            <svg class="promo-banner-bg-shape" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(50,50)">
-                <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" />
-                <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" transform="rotate(60)" />
-                <rect x="-6" y="-45" width="12" height="90" rx="6" ry="6" fill="#B4F105" transform="rotate(120)" />
-              </g>
-            </svg>
-
-            <h3 class="promo-title">Level up your sales managing to the next level.</h3>
-            <p class="promo-desc">An easy way to manage sales with care and precision.</p>
-            <button class="btn-promo" id="btn-promo-action">Check the updates now</button>
           </div>
         </div>
       </div>
-      <!-- END: RIGHT AREA -->
+    </section>
+    <!-- ================ offer section end ================= --> 
 
-    </div>
-    <!-- END: Main Layout Grid -->
-     <?php
-      include("base/footer.php");
-    ?>
+    <!-- ================ Best Selling item  carousel ================= --> 
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Popular Item in the market</p>
+          <h2>Best <span class="section-intro__style">Sellers</span></h2>
+        </div>
+        <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product1.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Accessories</p>
+              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product2.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Beauty</p>
+              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product3.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product4.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product1.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Accessories</p>
+              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product2.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Beauty</p>
+              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product3.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+
+          <div class="card text-center card-product">
+            <div class="card-product__img">
+              <img class="img-fluid" src="img/product/product4.png" alt="">
+              <ul class="card-product__imgOverlay">
+                <li><button><i class="ti-search"></i></button></li>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+                <li><button><i class="ti-heart"></i></button></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <p>Decor</p>
+              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <p class="card-product__price">$150.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Best Selling item  carousel end ================= --> 
+
+    <!-- ================ Blog section start ================= -->  
+    <section class="blog">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <p>Popular Item in the market</p>
+          <h2>Latest <span class="section-intro__style">News</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog1.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog2.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-blog">
+              <div class="card-blog__img">
+                <img class="card-img rounded-0" src="img/blog/blog3.png" alt="">
+              </div>
+              <div class="card-body">
+                <ul class="card-blog__info">
+                  <li><a href="#">By Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                </ul>
+                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
+                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
+                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ Blog section end ================= -->  
+
+    <!-- ================ Subscribe section start ================= --> 
+    <section class="subscribe-position">
+      <div class="container">
+        <div class="subscribe text-center">
+          <h3 class="subscribe__title">Get Update From Anywhere</h3>
+          <p>Bearing Void gathering light light his eavening unto dont afraid</p>
+          <div id="mc_embed_signup">
+            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
+              <div class="form-group ml-sm-auto">
+                <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
+                <div class="info"></div>
+              </div>
+              <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
+              <div style="position: absolute; left: -5000px;">
+                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+              </div>
+
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- ================ Subscribe section end ================= --> 
+
+    
+
+  </main>
+
+  <?php
+    include("base/footer.php");
+  ?>
+
 
   
