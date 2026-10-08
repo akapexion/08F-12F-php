@@ -1,3 +1,29 @@
+<?php
+    include("config/db.php");
+
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = sha1($_POST['password']);
+
+        $select_query = "SELECT * FROM users WHERE user_email = '$email' AND user_password = '$password'";
+
+        $execute = mysqli_query($conn, $select_query);
+
+        $count_users = mysqli_num_rows($execute);
+
+        if($count_users > 0){
+            echo "<script>
+                alert('Login Successful');
+            </script>";
+        }
+        else {
+            echo "<script>
+                alert('Incorrect Credentials');
+            </script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,14 +67,14 @@
             <p class="login-subtitle">Please sign in to access your dashboard</p>
             
             <!-- Login Form -->
-            <form action="index.html" method="GET" id="loginForm" class="needs-validation" novalidate>
+            <form method="POST" id="loginForm" class="needs-validation" novalidate>
                 
                 <!-- Email Input Group -->
                 <div class="login-form-group">
                     <label for="email" class="login-form-label">Email Address</label>
                     <div class="login-input-group">
                         <i class="bi bi-envelope input-icon"></i>
-                        <input type="email" id="email" class="login-input" placeholder="name@company.com" required>
+                        <input type="email" id="email" class="login-input" placeholder="name@company.com" required name="email">
                     </div>
                 </div>
                 
@@ -57,25 +83,16 @@
                     <label for="password" class="login-form-label">Password</label>
                     <div class="login-input-group">
                         <i class="bi bi-shield-lock input-icon"></i>
-                        <input type="password" id="password" class="login-input login-input-password" placeholder="••••••••" required>
+                        <input type="password" id="password" class="login-input login-input-password" placeholder="••••••••" required name="password">
                         <button type="button" class="password-toggle-btn" id="toggle-password" aria-label="Show password">
                             <i class="bi bi-eye"></i>
                         </button>
                     </div>
                 </div>
                 
-                <!-- Options (Remember me & Forgot Password) -->
-                <div class="login-options">
-                    <label class="custom-control-label">
-                        <input type="checkbox" class="custom-checkbox-input" id="rememberMe">
-                        <span>Remember Me</span>
-                    </label>
-                    <a href="#" class="forgot-password-link">Forgot Password?</a>
-                </div>
-                
                 <!-- Submit Button -->
-                <button type="submit" class="btn-login" id="btn-submit">
-                    <span>Sign In to Dashboard</span>
+                <button name="login" type="submit" class="btn-login" id="btn-submit">
+                    <span>Login</span>
                     <i class="bi bi-arrow-right"></i>
                 </button>
                 
